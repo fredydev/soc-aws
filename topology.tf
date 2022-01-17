@@ -57,4 +57,3 @@ resource "aws_cloudwatch_log_group" "aws_to_soc" {
   retention_in_days = 3
   tags              = merge(local.tags, { Name = "loggroup-${local.name}" })
 }
-
