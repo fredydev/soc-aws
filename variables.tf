@@ -30,28 +30,33 @@ variable "account_type" {
 
 variable "aws_account_alias_requested" {
   description = "Retrieved from account_configuration .tfvars"
-  type = string
+  type        = string
 }
 
 variable "member_email_contact" {
   description = "Retrieved from account_configuration .tfvars"
-  type = string
+  type        = string
 }
 
-variable "azure_workspace_id" {  
-  description = "Azure  workspace  id"  
-  type        = string  
+variable "azure_workspace_id" {
+  description = "Azure  workspace  id"
+  type        = string
   sensitive   = true
 }
 
-variable "azure_workspace_key" {  
-  description = "Azure workspace key"  
-  type        = string  
+variable "environment" {
+  description = "env where the infrastructure will be deployed"
+  type        = string
+}
+
+variable "azure_workspace_key" {
+  description = "Azure workspace key"
+  type        = string
   sensitive   = true
 }
 
-variable "azure_workspace_logtype" {  
-  description = "Azure workspace log type"  
-  type        = string  
+variable "azure_workspace_logtype" {
+  description = "Azure workspace log type"
+  type        = string
   sensitive   = true
 }
