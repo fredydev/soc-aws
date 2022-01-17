@@ -44,6 +44,11 @@ variable "azure_workspace_id" {
   sensitive   = true
 }
 
+variable "environment" {  
+  description = "env where the infrastructure will be deployed"  
+  type        = string
+}
+
 variable "azure_workspace_key" {  
   description = "Azure workspace key"  
   type        = string  
