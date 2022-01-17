@@ -1,7 +1,7 @@
 # Iam permissions for lambda
 resource "aws_iam_role" "role_for_lambda" {
-  name               = join("-",["securityhub-findings", local.name])
-  assume_role_policy =  <<EOF
+  name               = join("-", ["securityhub-findings", local.name])
+  assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -16,12 +16,12 @@ resource "aws_iam_role" "role_for_lambda" {
   ]
 }
 EOF
-tags = local.tags
+  tags               = local.tags
 }
 
 
 resource "aws_iam_policy" "aws_to_soc_lambda" {
-  name        = join("-", ["securityhub-lambda",local.name])
+  name        = join("-", ["securityhub-lambda", local.name])
   path        = "/"
   description = "policy for lambda with basic execrole and listing organization permission"
 
